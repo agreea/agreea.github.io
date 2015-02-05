@@ -49,9 +49,10 @@ Theme Styles
 *******************************************************************************/
 
 body {
-  box-sizing: border-box;
+/*  box-sizing: border-box;*/
   color:#373737;
-  background: url('../images/landscape-cropped.jpg');
+  width:100%;
+  background: url('../images/landscape2.png');
   font-size: 16px;
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -59,26 +60,28 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 10px 0;
-  font-weight: 700;
+/*  margin: 10px 0;
+*/  font-weight: 700;
   color:#222222;
   font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
   letter-spacing: -1px;
 }
 
-h1 {
+h1 span, h2 span, h3 span {
   font-size: 36px;
-  font-weight: 700;
+  padding: 0px 6px 0px 6px;
+}
+  
+h1 span {
+  background-color: #FF3A3A;
+}
+  
+h2 span {
+  background-color: #3A3AFF;
 }
 
-h2 {
-  padding-bottom: 10px;
-  font-size: 32px;
-  background: url('../images/bg_hr.png') repeat-x bottom;
-}
-
-h3 {
-  font-size: 24px;
+h3 span {
+  background-color: #FFFF3A;
 }
 
 h4 {
@@ -137,20 +140,18 @@ strong {
 img {
   position: relative;
   margin: 0 auto;
-  padding: 5px;
   margin: 10px 0 10px 0;
+  max-width: 330px;
+  width: auto;
+  height: auto;
+
 /*
     border: 1px solid #ebebeb; 
   box-shadow: 0 0 5px #ebebeb;
   -webkit-box-shadow: 0 0 5px #ebebeb;
   -moz-box-shadow: 0 0 5px #ebebeb;
   -o-box-shadow: 0 0 5px #ebebeb;
-  -ms-box-shadow: 0 0 5px #ebebeb*/;
-}
-img {
-  max-width: 100%;
-  width: auto;
-  height: auto;
+  -ms-box-shadow: 0 0 5px #ebebeb;*/
 }
 
 p img {
@@ -266,14 +267,16 @@ Full-Width Styles
 *******************************************************************************/
 
 .outer {
-  width: 100%;
+  width: 1200px;
+  text-align: center;
 }
 
 .inner {
   position: relative;
-  max-width: 640px;
-  padding: 20px 10px;
-  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+/*  padding: 20px 10px;
+*/  margin: 0 auto;
 }
 
 #forkme_banner {
@@ -292,8 +295,8 @@ Full-Width Styles
 }
 
 #header_wrap {
-  background: url('../images/landscape-cropped.jpg');
-/*  background: #212121;
+/*  background: url('../images/landscape-cropped.jpg');
+*//*  background: #212121;
   background: -moz-linear-gradient(top, #373737, #212121);
   background: -webkit-linear-gradient(top, #373737, #212121);
   background: -ms-linear-gradient(top, #373737, #212121);
@@ -360,32 +363,33 @@ Full-Width Styles
   background: url(../images/sprite_download.png) no-repeat top right;
 }
 
-.Row
-{
-    display: table;
-    width: 100%; /*Optional*/
-    table-layout: fixed; /*Optional*/
-    border-spacing: 10px; /*Optional*/
-}
 .clickable-image {
-  display: table-cell;
+  display: inline-block;
   text-align: center;
-  max-width: 360px;
-  width: auto;
-  padding: 40px;
-  float:left;
-  width:33%; // or 33% for equal width independent of parent width
+  margin: 15px;
+  width:30%; // or 33% for equal width independent of parent width
+}
 
+#bio {
+  width:30%;
+  height:30%;
+  background-image: url(../images/bio-icon-grey.png);
+}
+
+#bio:hover {
+  width:30%;
+  height:30%;
+  background-image: url(../images/bio-icon-color.png);
 }
 
 #main_content_wrap {
-  background: url('../images/landscape2.jpg');
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #111;
+  width: 100%
+  text-align: center;
 }
 
 #main_content {
-  padding-top: 40px;
+  padding: 5%;
+  text-align: center;
 }
 
 #footer_wrap {
@@ -416,16 +420,19 @@ Small Device Styles
   font-size: 32px;
   }
 
-  h1 {
+  h1 span {
     font-size: 28px;
+    background-color: #FF3A3A;
   }
 
-  h2 {
-    font-size: 24px;
+  h2 span {
+    font-size: 28px;
+    background-color: #3A3AFF;
   }
 
-  h3 {
-    font-size: 21px;
+  h3 span {
+    font-size: 28px;
+    background-color: #FFFF3A;
   }
 
   h4 {
